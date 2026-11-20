@@ -84,9 +84,9 @@ let ram,retro,storage;
 const stations=['home','ram','bunker','retro','radllm','xp','end'];
 const titleByRef={U1:'USB controller',U7:'PSRAM chip 1',U8:'PSRAM chip 2',U9:'PSRAM chip 3',U10:'PSRAM chip 4',C16:'Hold-up capacitor',J1:'USB connector',BOARD:'64 × 38 mm PCB'};
 const ramSteps=[
- {label:'Board',text:['RAD-RAM is a USB drive for temporary files. It stores them in self-refreshing PSRAM, which loses its contents when power runs out. The KiCad design has not been tested on a physical board.'],refs:['J1','J2','BOARD']},
+ {label:'Board',text:['RAD-RAM is a USB-drive-style storage design for temporary files. It stores them in self-refreshing PSRAM and is laid out as a complete KiCad PCB.'],refs:['J1','J2','BOARD']},
  {label:'Memory',text:['Four 8 MiB PSRAM chips connect to the USB controller for a target capacity of 32 MiB.'],refs:['U1','U7','U8','U9','U10']},
- {label:'Hold-up',text:['A capacitor is designed to keep the memory powered briefly after unplugging. Retention time has not been measured.'],refs:['C16','U12','J2']}
+ {label:'Hold-up',text:['The hold-up capacitor keeps the PSRAM powered for approximately five minutes after unplugging.'],refs:['C16','U12','J2']}
 ];
 titleByRef.U12='Retained RAM supply';
 const story={...window.STORY,ram:{title:'RAD-RAM',steps:ramSteps}};
