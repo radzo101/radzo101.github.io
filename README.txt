@@ -1,0 +1,1 @@
+Preview ZIP includes the HTML and its media assets. Serve this editable source with an HTTP server. Contains editable rendering code plus geometry extracted from Radin’s actual project files. Do not publish project geometry without review. No firmware, production service source or employee/player records are included.

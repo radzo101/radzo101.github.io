@@ -1,0 +1,42 @@
+#radllm-view{position:absolute;z-index:4;top:22%;right:4.8%;width:min(50vw,820px);margin:0;opacity:0;visibility:hidden;transform:perspective(1200px) translate3d(65px,18px,-92px) rotateY(-13deg);transition:opacity .48s,transform .68s cubic-bezier(.19,.74,.24,1),visibility 0s .68s;pointer-events:none}
+[data-chapter=radllm] #radllm-view{opacity:1;visibility:visible;transform:perspective(1200px) translate3d(0,0,0) rotateY(-2deg);transition-delay:0s}
+.needle-screen{position:relative;display:grid;grid-template-rows:auto 1fr auto;aspect-ratio:2.02;padding:.68rem .75rem .52rem;background:#000;color:#eee;border:1px solid #4b4b4b;
+ font:normal clamp(11px,1.07vw,15px)/1.47 Consolas,"Cascadia Mono","Liberation Mono",monospace;font-variant-ligatures:none;text-align:left;box-shadow:0 23px 56px #0008}
+.needle-tabs{display:flex;align-items:center;gap:1ch;margin-bottom:.6rem;color:#969696;line-height:1.45}
+.needle-tabs b{font-weight:700;color:#f0f0f0;background:#242424;padding:0 1ch}
+.needle-tabs span{color:#76cceb}
+.needle-panes{position:relative;min-height:0;overflow:hidden}
+.needle-pane{position:absolute;inset:0;display:grid;grid-template-rows:1fr auto;min-width:0;opacity:0;visibility:hidden;transform:translateY(11px);transition:transform .3s cubic-bezier(.19,.78,.32,1),opacity .24s,visibility 0s .3s}
+[data-step="0"] .needle-chat,[data-step="1"] .needle-settings,[data-step="2"] .needle-diff{opacity:1;visibility:visible;transform:translateY(0);transition-delay:0s}
+.needle-log{min-height:0;align-content:start;padding:.25em 1ch .5em}
+.needle-log p,.needle-command p,.needle-changes p{margin:0}
+.needle-user{color:#eee;margin-bottom:.8em!important}
+.needle-user span{color:#00d7ff}
+.needle-screen fieldset{min-width:0;margin:0;padding:.23em 1ch .45em;border:1px solid #51545b;border-radius:4px}
+.needle-screen legend{padding:0 .45ch;color:#b9bcc3}
+.needle-screen .needle-answer p{margin:.1em 0}
+.needle-composer{display:flex;gap:1ch;align-items:center;min-height:2.55em;border:1px solid #888;border-radius:4px;padding:0 1ch;color:#999;background:#000}
+.needle-composer b{font-weight:400;color:#00d7ff}
+.needle-composer .needle-command-input{color:#eee}
+.needle-command{align-self:end;max-width:90%;margin:0 1ch .55em;padding:.36em 1ch .45em;background:#151515;border:1px solid #505050;border-radius:4px;color:#cfcfcf}
+.needle-command strong,.needle-filename{color:#76cceb}
+.needle-command dl{margin:.2em 0 0;display:grid;grid-template-columns:max-content minmax(0,1fr);gap:.2em 2ch}
+.needle-command dt,.needle-command dd{margin:0}
+.needle-command dt{color:#eee}
+.needle-screen .needle-changes{border-color:#5c7181}
+.needle-changes code{display:block;white-space:pre-wrap;overflow-wrap:anywhere;font:inherit}
+.needle-changes .removed{color:#ef8d92}.needle-changes .added{color:#93d9a5}
+.needle-summary{padding:.42em 1ch 0;color:#eee}.needle-summary .added{color:#93d9a5}.needle-summary .removed{color:#ef8d92}
+.needle-status{display:flex;justify-content:space-between;align-items:center;gap:1ch;padding:.24em 1ch 0;color:#999;white-space:nowrap}
+.needle-status span:last-child{font-weight:700;color:#b9bcc3}
+@media(min-width:781px) and (min-height:541px){[data-chapter=radllm] #project{width:min(28rem,27vw)}[data-chapter=radllm] #project h2{font-size:clamp(2.8rem,5.6vw,6.4rem)}}
+@media(max-width:780px) and (orientation:portrait){
+ #radllm-view{left:5%;right:5%;top:max(12px,env(safe-area-inset-top));width:auto;transform:translateY(16px)}
+ [data-chapter=radllm] #radllm-view{transform:translateY(0)}
+ .needle-screen{aspect-ratio:auto;min-height:clamp(204px,38dvh,255px);font-size:clamp(10px,2.8vw,13px);padding:.52rem .46rem .4rem}
+ .needle-status,.needle-log,.needle-composer{padding-inline:.6ch}
+}
+@media(orientation:landscape) and (max-height:540px) and (max-width:1024px){
+ #radllm-view{top:12px;right:3%;width:47%}.needle-screen{aspect-ratio:auto;height:clamp(183px,59dvh,245px);font-size:clamp(10px,1.7vw,13px)}
+}
+@media(prefers-reduced-motion:reduce){#radllm-view,.needle-pane,[data-chapter=radllm] #radllm-view{transition:none;transform:none}}

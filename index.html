@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en-AU" data-retro-cad="true" data-storage-cad="true">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="dark"><meta name="description" content="Radin Taheri’s portfolio of software, systems and hardware projects.">
+<title>Radin Taheri</title><link rel="stylesheet" href="stage.css"><link rel="stylesheet" href="films.css"><link rel="stylesheet" href="radllm-view.css">
+<script defer src="assets/three.min.js"></script><script defer src="story.js"></script><script defer src="cad.js"></script><script defer src="intro-sculpture.js"></script><script defer src="world.js"></script><script defer src="films.js"></script>
+</head>
+<body>
+<main id="stage" aria-label="Radin Taheri portfolio">
+<div class="atmosphere" aria-hidden="true"></div>
+<canvas id="space" aria-hidden="true"></canvas>
+<a id="xp-gameplay" href="https://www.youtube.com/watch?v=nWGy0jiTYZM" target="_blank" rel="noopener" aria-label="Watch the modded 2016 Rust build on YouTube" inert aria-hidden="true">
+ <img src="assets/xp-gameplay.webp" alt="The feature video’s actual gameplay thumbnail: a first-person view from a rooftop in the modded 2016 Rust build.">
+</a>
+<div id="bunker-field" aria-hidden="true">
+<div class="photo"><img alt="" draggable="false" src="assets/bunker-1.png"></div>
+<div class="photo"><img alt="" draggable="false" src="assets/bunker-2.png"></div>
+<div class="photo"><img alt="" draggable="false" src="assets/bunker-3.png"></div>
+<div class="photo"><img alt="" draggable="false" src="assets/bunker-4.png"></div>
+</div>
+<div id="bunker-tv" aria-hidden="true" hidden>
+ <button type="button" id="tv-float" aria-label="Watch the full Bunker Bound development reel" tabindex="-1">
+  <canvas id="tv-model" aria-hidden="true"></canvas>
+  <span class="tv-proxy" aria-hidden="true">
+   <span class="tv-proxy-depth"></span>
+   <span class="tv-front">
+    <span class="tv-tube-seat">
+     <span id="tv-glass">
+      <img id="tv-poster" alt="" draggable="false">
+      <video class="tv-clip" muted playsinline preload="none"></video>
+      <video class="tv-clip" muted playsinline preload="none"></video>
+      <canvas id="tv-curved-preview" aria-hidden="true"></canvas>
+      <span class="tv-fallback-glare"></span><span class="tv-fallback-snow"></span>
+     </span>
+    </span>
+    <span class="tv-fallback-controls"><i></i><i></i><span></span><b></b></span>
+    <span class="tv-fallback-aerial"></span>
+   </span>
+  </span>
+ </button>
+ <svg id="tv-leader" aria-hidden="true"><polyline class="annotation-line"></polyline><circle class="annotation-pin" r="2.1"></circle></svg>
+ <div id="tv-label" class="scene-annotation tv-annotation" aria-hidden="true"><span id="tv-name"></span></div>
+</div>
+<figure id="xp-evidence" aria-label="XP Rust evidence">
+ <div class="xp-dimension" aria-hidden="true"></div>
+ <div id="xp-plates">
+  <div id="xp-plate-front">
+   <img id="xp-detection" src="assets/xp-detection-close.webp" alt="Anonymised NoClip flag and player movement timeline.">
+   <img id="xp-review" src="assets/xp-review-close.webp" alt="Anonymised AI review: insufficient evidence, unclear certainty, review recommended.">
+  </div>
+  <div class="xp-evidence-spine" aria-hidden="true"></div>
+ </div>
+ <figcaption><button id="xp-enlarge" type="button" aria-expanded="false">Read close-up</button></figcaption>
+</figure><svg id="photo-leaders" aria-hidden="true"></svg><div id="photo-labels" aria-hidden="true"></div>
+<svg id="leaders" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"></svg>
+<div id="callouts" aria-hidden="true"></div>
+<div id="shade" aria-hidden="true"></div>
+<figure id="radllm-view" aria-label="RAD LLM terminal layout, illustrated with sample data" aria-hidden="true">
+ <div class="needle-screen">
+  <div class="needle-tabs"><b>main</b><span aria-hidden="true">+</span></div>
+  <div class="needle-panes">
+   <div class="needle-pane needle-chat" data-terminal-pane="0">
+    <div class="needle-log">
+     <p class="needle-user"><span aria-hidden="true">&gt;</span> Where does the parser handle blank input?</p>
+     <fieldset class="needle-answer"><legend>AI · Qwen3.5 4B</legend><p>In parser.py, parse_line checks the input before parsing it.</p></fieldset>
+    </div>
+    <div class="needle-composer"><b aria-hidden="true">&gt;</b>Type a message</div>
+   </div>
+   <div class="needle-pane needle-settings" data-terminal-pane="1" aria-hidden="true">
+    <div class="needle-command">
+     <strong>COMMANDS</strong>
+     <dl><dt>/temperature</dt><dd>Sampling temperature</dd>
+         <dt>/max</dt><dd>Maximum output tokens</dd>
+         <dt>/context</dt><dd>Context window</dd></dl>
+    </div>
+    <div class="needle-composer"><b aria-hidden="true">&gt;</b><span class="needle-command-input">/temperature 0.3</span></div>
+   </div>
+   <div class="needle-pane needle-diff" data-terminal-pane="2" aria-hidden="true">
+    <div class="needle-log">
+     <fieldset class="needle-changes"><legend>CHANGED · click to collapse</legend>
+      <p class="needle-filename">parser.py</p>
+      <code>  def parse_line(raw):<br><span class="removed">-     return raw or None</span><br><span class="added">+     return raw.strip() or None</span></code>
+     </fieldset>
+     <p class="needle-summary"><span aria-hidden="true">› </span>1 file changed <span class="added">+1</span> <span class="removed">-1</span></p>
+    </div>
+    <div class="needle-composer"><b aria-hidden="true">&gt;</b>Type a message</div>
+   </div>
+  </div>
+  <div class="needle-status"><span>READY</span><span>medium&nbsp;&nbsp; Qwen3.5 4B&nbsp;&nbsp; Workspace</span></div>
+ </div>
+</figure>
+<header id="intro">
+<h1>Radin<br>Taheri</h1>
+<button class="enter" type="button" data-go="1">Explore my work <span aria-hidden="true">↓</span></button>
+</header>
+<section id="project" aria-labelledby="project-title" hidden>
+<h2 id="project-title"></h2>
+<div class="detail">
+<div id="steps" role="group" aria-label="Project detail"></div>
+<div id="description">
+<div id="detail-text"></div>
+</div>
+<a href="https://radzo.itch.io/bunkerbound" id="game-link" target="_blank" rel="noopener" hidden>Play Bunker Bound</a>
+<a href="https://www.youtube.com/watch?v=nWGy0jiTYZM" id="xp-video" target="_blank" rel="noopener" hidden>Watch the modded 2016 build ↗</a>
+</div>
+</section>
+<dialog id="film-dialog" aria-labelledby="film-heading">
+ <header><button type="button" id="film-close" aria-label="Close development footage">Close</button></header>
+ <h2 id="film-heading"></h2>
+ <video id="film-player" controls playsinline preload="none"></video>
+ <p id="film-error" role="alert" hidden>Clip unavailable. Extract the whole ZIP and keep the assets folder next to the HTML.</p>
+ <p id="film-caption"></p>
+ <footer><button type="button" id="film-prev" aria-label="Previous clip">←</button><label for="film-list" class="sr">Choose a clip</label><select id="film-list"></select><button type="button" id="film-next" aria-label="Next clip">→</button></footer>
+</dialog>
+<section id="ending" hidden aria-labelledby="end-title"><h2 id="end-title">Radin<br>Taheri</h2><div><button type="button" data-go="0">Back to the beginning</button><a href="https://github.com/radzo101" target="_blank" rel="noopener">GitHub</a></div></section>
+<nav id="jump" aria-label="Jump to project">
+<button data-go="0" type="button" aria-current="true">Home</button><button data-go="1" type="button">RAD-RAM</button><button data-go="2" type="button">Bunker Bound</button><button data-go="3" type="button">RetroPC</button><button data-go="4" type="button">RAD LLM</button><button data-go="5" type="button">XP Rust</button><button data-go="6" type="button">End</button>
+</nav>
+<div class="motion-controls">
+<label for="mobile-jump" class="sr">Jump to project</label><select id="mobile-jump" aria-label="Jump to project"></select>
+</div>
+<div id="timeline" aria-hidden="true"><i></i></div>
+<div id="live" class="sr" aria-live="polite"></div>
+<noscript><p id="noscript">Enable JavaScript to move through the projects.</p></noscript>
+</main>
+</body></html>
