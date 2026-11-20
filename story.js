@@ -21,7 +21,7 @@ window.STORY = {
     steps:[
       {label:'The bunker',text:['Bunker Bound is a low-poly extraction shooter made in Godot. Players try to escape a bunker, with customisable equipment and multiplayer that combines peer-to-peer connections with a central server.']},
       {label:'Ballistics',text:['Bullets can penetrate materials, deform doors and walls, and leave entry and exit wounds. Blood can transfer to clothing.']},
-      {label:'Handling',text:['Rounds move up the magazine as the weapon cycles. Players can pilot FPV drones. The older public prototype on itch.io has LAN play but predates these mechanics.']},
+      {label:'Handling',text:['Rounds move up the magazine as the weapon cycles. Players can pilot FPV drones.']},
       {label:'Dev films',text:['Development footage covers sound propagation, movement, procedural animation, drones and weapon finishes.']}
     ]
   },
